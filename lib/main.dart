@@ -38,7 +38,6 @@ class MyHomePage extends StatelessWidget {
           title: Text('Flutter App'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
@@ -47,6 +46,26 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.cyan,
                 child: Text('todo: CHART!'),
                 elevation: 5,
+              ),
+            ),
+            Card(
+              elevation: 5,
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: <Widget>[
+                    TextField(
+                      decoration: InputDecoration(labelText: "Title"),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: "Amount"),
+                    ),
+                    ElevatedButton(
+                      child: Text("Add Transaction"),
+                      onPressed: () {},
+                    )
+                  ],
+                ),
               ),
             ),
             Column(
@@ -86,7 +105,7 @@ class MyHomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            DateFormat().format(trans.date).,
+                            DateFormat().format(trans.date),
                             style: TextStyle(color: Colors.blueGrey),
                           ),
                         ],
